@@ -1,0 +1,31 @@
+<h2>H15 Registrierung</h2>
+
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <input #name id="name" type="text" autocomplete="off" autofocus>
+        <label for="name">Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input #email id="email" type="text" autocomplete="on">
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea #about id="textarea1" class="materialize-textarea"></textarea>
+        <label for="textarea1">Erzähle etwas über dich</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <button type="submit"
+            (click)="addGuest($event, name.value, email.value, about.value)"
+            class="waves-effect waves-light btn blue darken-4">Speichern</button>
+      </div>
+    </div>
+  </form>
+</div>
